@@ -1,0 +1,24 @@
+.App {
+  /* text-align: center; */
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  height: 15%;
+  
+  /* flex-wrap: wrap; */
+}
+.divContener{
+  /* width: 30%; */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* height: 5%; */
+  border: 2px solid gray;
+}
+
+#imgDev{
+  width: 95%;
+  height: 30%;
+}
+
