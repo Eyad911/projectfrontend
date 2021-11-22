@@ -32,7 +32,7 @@ export const Nav = () => {
             navigate("/electronics");
           }}
         >
-          Songs
+          catag
         </li>
         <li
           onClick={() => {
