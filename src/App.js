@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import { Nav } from "./components/Nav";
 import { Home } from "./components/Home";
 import Signup from './components/Signup';
+import Login from './components/Login';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Routes>
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/login" element={<Login />} />
         </Routes>
     </div>
   );

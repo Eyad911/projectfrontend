@@ -48,7 +48,13 @@ export const Nav = () => {
         >
           Sign Up
         </li>
-       
+        <li
+          onClick={() => {
+            navigate("/login");
+          }}
+        >
+          Log In
+        </li>
       </ul>
 
         </div>

@@ -19,10 +19,11 @@ export default class Signup extends Component {
     this.changePassword = this.changePassword.bind(this);
     this.submitSignUp = this.submitSignUp.bind(this);
   }
+  
 
   changeFullName(e) {
     this.setState({
-      fullName: e.target.value,
+      fullName: e.target.value
     });
   }
 

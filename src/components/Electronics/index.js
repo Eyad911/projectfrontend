@@ -14,6 +14,7 @@ export const Electronics = () => {
   
       setProduct(product.data);
       // console.log(product.data);
+      
     };
 
     return (
