@@ -57,6 +57,9 @@ export default class Signup extends Component {
     // console.log(this.state.userName.length);
     // console.log(this.state.email.length);
     // console.log(this.state.password.length);
+
+
+
     if (
       this.state.fullName.length > 0 &&
       this.state.userName.length > 0 &&
@@ -66,6 +69,8 @@ export default class Signup extends Component {
       axios
         .post("http://localhost:5000/users/signup", riges)
         .then((res) => console.log(res));
+
+       
 
       window.location = "/home";
 
