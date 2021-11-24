@@ -1,20 +1,20 @@
 import React from 'react'
 import './style.css'
 import { useNavigate } from 'react-router';
-import { Electronics } from '../Electronics';
+// import { Electronics } from '../Electronics';
 
 export const Home = () => {
     const navigate = useNavigate();
     return (
        
              <div className="homeDiv">
-      <h1>Department</h1>
+      <h1 id="departH1">Department</h1>
 
       <div className="genreCardsDiv">
         <div
           className="genres"
           onClick={() => {
-            navigate("/rock");
+            navigate("/accessories");
           }}
         >
           <img
@@ -27,7 +27,7 @@ export const Home = () => {
         <div
           className="genres"
           onClick={() => {
-            navigate("/accessories");
+            navigate("/phone");
           }}
         >
           <img
@@ -40,7 +40,7 @@ export const Home = () => {
         <div
           className="genres"
           onClick={() => {
-            navigate("/phone");
+            navigate("/printers");
           }}
         >
           <img
@@ -49,6 +49,58 @@ export const Home = () => {
             alt="jazzImg"
           />
           <h2 className="genHead">Printers</h2>
+        </div>
+        <div
+          className="genres"
+          onClick={() => {
+            navigate("/headphones");
+          }}
+        >
+          <img
+            className="genreImg"
+            src="https://m.media-amazon.com/images/I/61Kq-Pz8d-L._AC_UY436_FMwebp_QL65_.jpg"
+            alt="ClassicImg"
+          />
+          <h2 className="genHead">Headphones</h2>
+        </div>
+        <div
+          className="genres"
+          onClick={() => {
+            navigate("/soul");
+          }}
+        >
+          <img
+            className="genreImg"
+            src="https://m.media-amazon.com/images/I/61Kq-Pz8d-L._AC_UY436_FMwebp_QL65_.jpg"
+            alt="ClassicImg"
+          />
+          <h2 className="genHead">Headphones</h2>
+        </div>
+        <div
+          className="genres"
+          onClick={() => {
+            navigate("/soul");
+          }}
+        >
+          <img
+            className="genreImg"
+            src="https://m.media-amazon.com/images/I/61Kq-Pz8d-L._AC_UY436_FMwebp_QL65_.jpg"
+            alt="ClassicImg"
+          />
+          <h2 className="genHead">Headphones</h2>
+        </div>
+        <div
+          className="genres"
+          onClick={() => {
+            navigate("/soul");
+          }}
+        >
+          <img
+            className="genreImg"
+            src="https://m.media-amazon.com/images/I/61Kq-Pz8d-L._AC_UY436_FMwebp_QL65_.jpg"
+            alt="ClassicImg"
+          />
+          <h2 className="genHead">Headphones</h2>
         </div>
         <div
           className="genres"

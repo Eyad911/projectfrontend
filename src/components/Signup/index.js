@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
+import './style.css'
 
 export default class Signup extends Component {
   constructor() {
@@ -82,6 +83,9 @@ export default class Signup extends Component {
       });
     } else window.alert("fill all fields");
   }
+  logInPage(){
+    
+  }
 
   render() {
     return (
@@ -89,6 +93,7 @@ export default class Signup extends Component {
         <div className="contener">
           <div className="formDiv">
             <form onSubmit={this.submitSignUp}>
+            <h2 id="firsth2">SignUp</h2>
               <input
                 type="text"
                 placeholder="Full Name"
@@ -101,27 +106,28 @@ export default class Signup extends Component {
                 placeholder="User Name"
                 onChange={this.changeUserName}
                 value={this.state.userName}
-                className="form-control form-group"
+                className="form-control form-group input2"
               />
               <input
-                type="text"
+                type="email"
                 placeholder="Email"
                 onChange={this.changeEmail}
                 value={this.state.email}
-                className="form-control form-group"
+                className="form-control form-group input2"
               />
               <input
-                type="text"
+                type="password"
                 placeholder="Password"
                 onChange={this.changePassword}
                 value={this.state.password}
-                className="form-control form-group"
+                className="form-control form-group input2"
               />
               <input
                 type="submit"
-                className="btn btn-danger btn-block"
-                value="submit"
+                className="btn btn-danger btn-block btnL"
+                value="SignUp"
               />
+               
             </form>
           </div>
         </div>

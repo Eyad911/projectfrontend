@@ -8,6 +8,11 @@ import { Home } from "./components/Home";
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Profile from './components/Profile';
+import { Landpage } from './components/Landpage';
+import { Accessories } from './components/Accessories';
+import { Phone } from './components/Phone';
+import { Printers } from './components/Printers';
+import { Headphone } from './components/Headphone';
 
 
 
@@ -18,11 +23,17 @@ function App() {
     
     <div className="App">
       <Nav />
+      
       <Routes>
+          <Route exact path="/" element={<Landpage />} />
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/profile" element={<Profile />} />
+          <Route exact path="/accessories" element={<Accessories />} />
+          <Route exact path="/phone" element={<Phone />} />
+          <Route exact path="/printers" element={<Printers />} />
+          <Route exact path="/headphones" element={<Headphone />} />
         </Routes>
     </div>
   );

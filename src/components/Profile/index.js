@@ -1,14 +1,17 @@
 import axios from "axios";
 import React from "react";
 // import Nav from "../Nav";
+import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
-const Profile = () => {
+const Profile = () => { 
+  const navigate = useNavigate();
   const [account, setAccount] = useState([]);
   const [local, setLocal] = useState([]);
   const [edit, setEdit] = useState("");
 
   
   const getData = async () => {
+   
     console.log("get data function");
     const item = await axios.get(
       `http://localhost:5000/users/email/${local.email}`
@@ -43,6 +46,11 @@ const Profile = () => {
         console.log("fill it");
       }
   };
+  const kick =()=>{
+    // eslint-disable-next-line
+    localStorage. clear()
+     navigate("/signin");
+    }
 
   return (
     <div>
@@ -56,6 +64,7 @@ const Profile = () => {
             </form>
             <h2>User Name: {item.userName}</h2>
             <h2>Email: {item.email}</h2>
+            <button className="btn btn-danger btn-block" onClick={kick}>Logout</button>
           </div>
         );
       })}

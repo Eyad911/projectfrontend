@@ -21,7 +21,7 @@ export const Electronics = () => {
         <div>
             {product.map((prod) => (
           <div className='divContener'>
-          <img src={prod.Pic} id='imgDev'/>
+          <img src={prod.Pic}  alt="Products"id='imgDev'/>
           <h2>{prod.Name} </h2>
           <p>{prod.Price}</p>
           

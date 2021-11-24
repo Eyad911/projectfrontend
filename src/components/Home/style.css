@@ -1,23 +1,35 @@
 .homeDiv {
     width: 100%;
-    margin-left: 285px;
-    background-color: white;
+    /* margin-left: 285px; */
+    background-color: rgb(189, 170, 170);
     padding-top: 20px;
     padding-left: 10px;
+    margin-top: 45px;
+    background-image: url("https://previews.123rf.com/images/antstang/antstang2003/antstang200300260/142995039-people-hand-using-mobile-phone-or-smartphone-searching-for-information-in-internet-online-society-we.jpg");
+    background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   }
   
   /*--------------------geners style---------------------*/
-  
+  #departH1{
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+  }
   .genreCardsDiv {
-      width: 70%;
+      width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   
   .genres {
-    width: 30%;
-    margin: 3px;
+    width: 22.5%;
+    height: 380px;
+    margin: 15px;
+    
     position: relative;
     text-align: center;
     color: white;
@@ -31,8 +43,9 @@
   
   .genreImg {
     width: 95%;
+    height: 350px;
     border-radius: 10px;
-    filter: brightness(50%);
+    filter: brightness(70%);
   }
   
   .genHead {

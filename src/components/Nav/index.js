@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 export const Nav = () => {
   const navigate = useNavigate();
     return (
-        <div>
-             <ul>
+        <div className="mainDiv">
+             <ul className="ulist">
         {/* <li
           onClick={() => {
             navigate(-1);
@@ -41,22 +41,24 @@ export const Nav = () => {
         >
           Podcasts
         </li>
-        <li
+        {/* <li
           onClick={() => {
             navigate("/signup");
           }}
         >
-          Sign Up
+          SignUp
         </li>
         <li
           onClick={() => {
             navigate("/login");
           }}
         >
-          Log In
-        </li>
+          LogIn
+        </li> */}
       </ul>
-
+       <h2 id="ecomH1"  onClick={() => {
+            navigate("/home");
+          }} >ecom </h2>
         </div>
     )
 }

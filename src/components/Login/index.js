@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import './style.css'
 const Login = () => {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
@@ -32,9 +33,9 @@ const Login = () => {
     // console.log(users[0].email);
     // console.log("log email",email);
     // console.log("log pass",password);
-    users.map((item) => {
-        console.log(item.email);
-        console.log(item.password);
+    users.map(item => {
+        // console.log(item.email);
+        // console.log(item.password);
       if (item.email === email && item.password === password) {
         ckeck = true;
       }
@@ -50,9 +51,8 @@ const Login = () => {
         console.log("error ", error);
       }
     } else {
-      let myWindow = window.open("", "", "width=200,height=100");
-      myWindow.document.write("<p> Wrong email or password </p>");
-      myWindow.focus();
+       window.alert("Wrong email or password ");
+      
     }
   };
 
@@ -60,6 +60,7 @@ const Login = () => {
     <div>
       <div className="contener">
           <div className="formDiv">
+            <h2 id="firsth2">Log In</h2>
             <form onSubmit={submitlogin}>
               
               <input
@@ -70,21 +71,22 @@ const Login = () => {
                 className="form-control form-group"
               />
               <input
-                type="text"
+                type="password"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
                 
-                className="form-control form-group"
+                className="form-control form-group input2"
               />
               <input
                 type="submit"
-                className="btn btn-danger btn-block"
+                className="btn btn-primary btn-block btnL"
                 value="Login"
-              />
+              /> 
+              <p onClick={registerPage}>Don't have an account ?</p>
             </form>
           </div>
         </div>
-      <p onClick={registerPage}>Don't have an account ?</p>
+      
     </div>
   );
 };
