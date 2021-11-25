@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios';
+import './style.css'
 
 
 const BASE_URL = "http://localhost:5000";
@@ -19,16 +20,36 @@ export const Headphone = () => {
 
 
     return (
-        <div>
-            {headphone.map((item) => (
-          <div className='divContener'>
-          <img src={item.Pic} alt="Headphone"id='imgDev'/>
-          <h2>{item.Name} </h2>
-          <p>{item.Price}</p>
-          
-          
+      <div className="mediaWrapper">
+      <h1 className="Accessh1">headphones</h1>
+      <div className="mediaDiv">
+        {headphone.map((item, i) => (
+          <div className="homeSongs" key={i}>
+            <div>
+
+              <img
+                key={`img-${i}`}
+                className="songImg"
+                src={item.Pic}
+                alt={`songImg-${i}`}
+              />
+              <p className="songName" key={`trackN-${i}`}>
+                <b>{item.Name}</b>
+              </p>
+              <p className="artistName" key={`artN-${i}`}>
+                {item.Price}
+              </p>
+            </div>
+            <img
+              className="favButton"
+              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/000000
+              /external-favorite-essentials-prettycons-solid-prettycons.png`}
+              alt="favIcon"
+              
+            />
           </div>
         ))}
-        </div>
-    )
+      </div>
+    </div>
+  );
 }

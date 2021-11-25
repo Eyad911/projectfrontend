@@ -13,6 +13,7 @@ import { Accessories } from './components/Accessories';
 import { Phone } from './components/Phone';
 import { Printers } from './components/Printers';
 import { Headphone } from './components/Headphone';
+import Cart from './components/Cart';
 
 
 
@@ -34,6 +35,7 @@ function App() {
           <Route exact path="/phone" element={<Phone />} />
           <Route exact path="/printers" element={<Printers />} />
           <Route exact path="/headphones" element={<Headphone />} />
+          <Route exact path="/cart" element={<Cart />} />
         </Routes>
     </div>
   );

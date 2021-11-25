@@ -26,8 +26,8 @@
   }
   
   .genres {
-    width: 22.5%;
-    height: 380px;
+    width: 25%;
+    height: 420px;
     margin: 15px;
     
     position: relative;
@@ -43,7 +43,7 @@
   
   .genreImg {
     width: 95%;
-    height: 350px;
+    height: 400px;
     border-radius: 10px;
     filter: brightness(70%);
   }

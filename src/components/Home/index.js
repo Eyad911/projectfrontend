@@ -89,7 +89,7 @@ export const Home = () => {
           />
           <h2 className="genHead">Headphones</h2>
         </div>
-        <div
+        {/* <div
           className="genres"
           onClick={() => {
             navigate("/soul");
@@ -101,8 +101,8 @@ export const Home = () => {
             alt="ClassicImg"
           />
           <h2 className="genHead">Headphones</h2>
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className="genres"
           onClick={() => {
             navigate("/soul");
@@ -114,7 +114,7 @@ export const Home = () => {
             alt="ClassicImg"
           />
           <h2 className="genHead">Headphones</h2>
-        </div>
+        </div> */}
       </div>
 
       {/* <Electronics/> */}

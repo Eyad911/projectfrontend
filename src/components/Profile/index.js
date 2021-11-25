@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-// import Nav from "../Nav";
+import "./style.css"
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 const Profile = () => { 
@@ -56,15 +56,21 @@ const Profile = () => {
     <div>
       {account.map((item, i) => {
         return (
-          <div key={i}>
+          <div key={i} className="formDiv">
             <form>
-              <h1>Full Name: {item.fullName}</h1>
+              <h1>Full Name:</h1>
+              <h3> {item.fullName}</h3>
               <input type="submit" value="Edit" onClick={editName} />
               <input type="text" onChange={(e) => setEdit(e.target.value)} id="fullName" />
-            </form>
-            <h2>User Name: {item.userName}</h2>
-            <h2>Email: {item.email}</h2>
+            <h1>User Name:</h1>
+            <h3>{item.userName}</h3>
+            <h1>Email:</h1>
+            <h3>{item.email}</h3></form>
+            
+           
             <button className="btn btn-danger btn-block" onClick={kick}>Logout</button>
+
+            <p>{item.date}</p>
           </div>
         );
       })}

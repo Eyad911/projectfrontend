@@ -22,21 +22,21 @@ export const Nav = () => {
         </li> */}
         <li
           onClick={() => {
-            navigate("/home");
+            navigate("/");
           }}
         >
           Home
         </li>
         <li
           onClick={() => {
-            navigate("/electronics");
+            navigate("/home");
           }}
         >
           catag
         </li>
         <li
           onClick={() => {
-            navigate("/podcasts");
+            navigate("/accessories");
           }}
         >
           Podcasts
