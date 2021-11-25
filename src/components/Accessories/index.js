@@ -8,7 +8,6 @@ import "./style.css"
 const BASE_URL = "http://localhost:5000";
 export const Accessories = () => {
   const navigate =useNavigate();
-  const [resSearch, setResSearch] = useState("");
   const [local, setLocal] = useState("");
   const [remAdd, setRemAdd] = useState([]);
     const [Accessorie, setAccessorie] = useState([]);

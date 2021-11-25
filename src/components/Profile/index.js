@@ -49,7 +49,7 @@ const Profile = () => {
   const kick =()=>{
     // eslint-disable-next-line
     localStorage. clear()
-     navigate("/signin");
+     navigate("/login");
     }
 
   return (

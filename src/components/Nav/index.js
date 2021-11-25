@@ -41,20 +41,20 @@ export const Nav = () => {
         >
           Podcasts
         </li>
-        {/* <li
+        <li
           onClick={() => {
-            navigate("/signup");
+            navigate("/cart");
           }}
         >
-          SignUp
+          Cart
         </li>
         <li
           onClick={() => {
-            navigate("/login");
+            navigate("/profile");
           }}
         >
-          LogIn
-        </li> */}
+          Profile
+        </li>
       </ul>
        <h2 id="ecomH1"  onClick={() => {
             navigate("/home");

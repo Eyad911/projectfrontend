@@ -37,6 +37,9 @@ height: 60px;
     align-items: center;
     /* color: #AE9A8C; */
 }
+li:hover{
+    color:#AE9A8C; 
+}
 
 li{
     /* width: 20%; */

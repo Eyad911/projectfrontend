@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 const Cart = () => {
-  const navigate = useNavigate();
+  
   const [account, setAccount] = useState([]);
   const [local, setLocal] = useState([]);
 
@@ -34,11 +34,7 @@ const Cart = () => {
     // eslint-disable-next-line
   }, [local]);
 
-  // Navigate to character info 
-  const itemInfo = (name) => {
-    console.log(name);
-    // navigate(`/character/name/${name}`);
-  };
+  
 
 
   // Remove from favorite
@@ -54,7 +50,7 @@ const Cart = () => {
         account.map((item, i) => {
           return (
             <div>
-              <div onClick={() => itemInfo(item.Name)}>
+              <div >
                 {" "}
                 <h1>{item.Name}</h1>
                 <img src={item.Pic} alt="prouducts" />
