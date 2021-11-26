@@ -14,7 +14,7 @@ import { Phone } from './components/Phone';
 import { Printers } from './components/Printers';
 import { Headphone } from './components/Headphone';
 import Cart from './components/Cart';
-
+import { Electronics } from './components/Electronics';
 
 
 
@@ -27,6 +27,7 @@ function App() {
       
       <Routes>
           <Route exact path="/" element={<Landpage />} />
+          <Route exact path="/Products" element={<Electronics />} />
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />

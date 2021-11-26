@@ -1,16 +1,17 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios'; 
-import { useNavigate } from 'react-router';
+
 import "./style.css"
+import { useNavigate } from 'react-router';
 
 
 const BASE_URL = "http://localhost:5000";
 export const Accessories = () => {
-  const navigate =useNavigate();
   const [local, setLocal] = useState("");
   const [remAdd, setRemAdd] = useState([]);
     const [Accessorie, setAccessorie] = useState([]);
+    const Navigate= useNavigate()
     useEffect(() => {
         getAllAccessories();
     }, []);
@@ -49,22 +50,25 @@ export const Accessories = () => {
           test.push(item._id);
         });
     
-        if (test.includes(id)) {
-          // document.getElementById(`${id}`).innerHTML = "Add";
-    
-          await axios.put(
-            `http://localhost:5000/users/removecart/${local.email}/${id}`
-          );
-        } else {
-          // document.getElementById(`${id}`).innerHTML = "Remove";
-    
-          await axios.put(
-            `http://localhost:5000/users/yourcart/${local.email}/${id}`
-          );
-        }
-        test = [];
-        getDataEmail();
-        getLocalStorage();
+        if(local){
+          if (test.includes(id)) {
+            
+      
+            await axios.put(
+              `http://localhost:5000/users/removecart/${local.email}/${id}`
+            );
+          } else {
+            
+      
+            await axios.put(
+              `http://localhost:5000/users/yourcart/${local.email}/${id}`
+            );
+          }
+          test = [];
+          getDataEmail();
+          getLocalStorage();
+        }else {window.alert("you should login or signup")
+        Navigate("/login")}
     
       };
 
@@ -78,19 +82,11 @@ export const Accessories = () => {
         });
         console.log("test", test);
     
-        if (test.length > 0) {
-          console.log(" > 0");
-          test.map((item) => {
-            // console.log(item);
-            // document.getElementById(`${item}`).innerHTML = "Remove";
-          }
-            );
-        }
-        test = []
       };
     
       useEffect(() => {
         test1()
+        // eslint-disable-next-line
       }, [remAdd]);
 
 
@@ -119,6 +115,7 @@ export const Accessories = () => {
             <img 
             className="favButton"
             src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/000000/external-cart-supermarket-flatart-icons-flat-flatarticons.png"
+            alt="btnlogo"
             onClick={() => removeOrAdd(item._id)}/>
           </div>
         ))}

@@ -27,7 +27,7 @@ const Login = () => {
 
   const submitlogin = (e) => {
     e.preventDefault();
-    let ckeck = false;
+    let check = false;
     // eslint-disable-next-line
     // console.log(users);
     // console.log(users[0].email);
@@ -37,10 +37,11 @@ const Login = () => {
         // console.log(item.email);
         // console.log(item.password);
       if (item.email === email && item.password === password) {
-        ckeck = true;
+        check = true;
       }
+      return check
     });
-    if (ckeck) {
+    if (check) {
       try {
         localStorage.setItem(
           "newUser",
@@ -49,6 +50,7 @@ const Login = () => {
         navigate("/home");
       } catch (error) {
         console.log("error ", error);
+       
       }
     } else {
        window.alert("Wrong email or password ");

@@ -71,10 +71,10 @@ export const Home = () => {
         >
           <img
             className="genreImg"
-            src="https://m.media-amazon.com/images/I/61Kq-Pz8d-L._AC_UY436_FMwebp_QL65_.jpg"
+            src="https://m.media-amazon.com/images/I/61+CDKTXYgL._AC_UL640_FMwebp_QL65_.jpg"
             alt="ClassicImg"
           />
-          <h2 className="genHead">Headphones</h2>
+          <h2 className="genHead">Devices</h2>
         </div>
         <div
           className="genres"
@@ -84,40 +84,16 @@ export const Home = () => {
         >
           <img
             className="genreImg"
-            src="https://m.media-amazon.com/images/I/61Kq-Pz8d-L._AC_UY436_FMwebp_QL65_.jpg"
+            src="https://m.media-amazon.com/images/I/61JVYr9m+CL._AC_UY436_FMwebp_QL65_.jpg"
             alt="ClassicImg"
           />
-          <h2 className="genHead">Headphones</h2>
+          <h2 className="genHead">Smart Watch</h2>
         </div>
-        {/* <div
-          className="genres"
-          onClick={() => {
-            navigate("/soul");
-          }}
-        >
-          <img
-            className="genreImg"
-            src="https://m.media-amazon.com/images/I/61Kq-Pz8d-L._AC_UY436_FMwebp_QL65_.jpg"
-            alt="ClassicImg"
-          />
-          <h2 className="genHead">Headphones</h2>
-        </div> */}
-        {/* <div
-          className="genres"
-          onClick={() => {
-            navigate("/soul");
-          }}
-        >
-          <img
-            className="genreImg"
-            src="https://m.media-amazon.com/images/I/61Kq-Pz8d-L._AC_UY436_FMwebp_QL65_.jpg"
-            alt="ClassicImg"
-          />
-          <h2 className="genHead">Headphones</h2>
-        </div> */}
+        
+       
       </div>
 
-      {/* <Electronics/> */}
+     
         </div>
        
 

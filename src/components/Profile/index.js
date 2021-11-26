@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import "./style.css"
+// import $ from "jquery"
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 const Profile = () => { 
@@ -12,11 +13,13 @@ const Profile = () => {
   
   const getData = async () => {
    
-    console.log("get data function");
+    if(local){
     const item = await axios.get(
       `http://localhost:5000/users/email/${local.email}`
     );
-    setAccount(item.data);
+    setAccount(item.data);} else {window.alert("login or signup")
+    navigate('/')
+  }
   };
 
 
@@ -32,6 +35,12 @@ const Profile = () => {
     // eslint-disable-next-line
   }, [local]);
 
+// const showOption = ()=>{
+// $('.show').show();
+// navigate("/profile")
+
+// }
+
   const editName = async (e) => {
     e.preventDefault();
     if (edit.length > 0) {
@@ -41,9 +50,8 @@ const Profile = () => {
         console.log(editFullName);
         document.getElementById("fullName").value = "";
         getData();
-        // setEdit("");
       } else {
-        console.log("fill it");
+        console.log("");
       }
   };
   const kick =()=>{
@@ -57,15 +65,18 @@ const Profile = () => {
       {account.map((item, i) => {
         return (
           <div key={i} className="formDiv">
+             {/* <button id="btnshow" onClick={()=>{showOption()}} >edit!</button> */}
+             
             <form>
               <h1>Full Name:</h1>
               <h3> {item.fullName}</h3>
-              <input type="submit" value="Edit" onClick={editName} />
-              <input type="text" onChange={(e) => setEdit(e.target.value)} id="fullName" />
+              <input type="submit" value="Edit" onClick={editName}  className="show"/>
+              <input type="text" placeholder="Edit You FullName" onChange={(e) => setEdit(e.target.value)} id="fullName"  />
+          
             <h1>User Name:</h1>
             <h3>{item.userName}</h3>
             <h1>Email:</h1>
-            <h3>{item.email}</h3></form>
+            <h3>{item.email}</h3> </form>
             
            
             <button className="btn btn-danger btn-block" onClick={kick}>Logout</button>

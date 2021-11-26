@@ -32,11 +32,11 @@ export const Nav = () => {
             navigate("/home");
           }}
         >
-          catag
+          category
         </li>
         <li
           onClick={() => {
-            navigate("/accessories");
+            navigate("/Products");
           }}
         >
           Podcasts
