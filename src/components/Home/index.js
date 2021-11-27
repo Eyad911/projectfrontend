@@ -1,13 +1,12 @@
-import React from 'react'
-import './style.css'
-import { useNavigate } from 'react-router';
+import React from "react";
+import "./style.css";
+import { useNavigate } from "react-router";
 // import { Electronics } from '../Electronics';
 
 export const Home = () => {
-    const navigate = useNavigate();
-    return (
-       
-             <div className="homeDiv">
+  const navigate = useNavigate();
+  return (
+    <div className="homeDiv">
       <h1 id="departH1">Department</h1>
 
       <div className="genreCardsDiv">
@@ -89,13 +88,7 @@ export const Home = () => {
           />
           <h2 className="genHead">Smart Watch</h2>
         </div>
-        
-       
       </div>
-
-     
-        </div>
-       
-
-    )
-}
+    </div>
+  );
+};

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://ecom-911.herokuapp.com";
 export const Printers = () => {
   const [printer, setPrinter] = useState([]);
   const [local, setLocal] = useState("");
@@ -33,9 +33,7 @@ export const Printers = () => {
 
   const getDataEmail = async () => {
     const user = JSON.parse(localStorage.getItem("newUser"));
-    const item = await axios.get(
-      `http://localhost:5000/users/cart/${user.email}`
-    );
+    const item = await axios.get(`${BASE_URL}/users/cart/${user.email}`);
     setRemAdd(item.data);
   };
 
@@ -48,13 +46,9 @@ export const Printers = () => {
 
     if (local) {
       if (test.includes(id)) {
-        await axios.put(
-          `http://localhost:5000/users/removecart/${local.email}/${id}`
-        );
+        await axios.put(`${BASE_URL}/users/removecart/${local.email}/${id}`);
       } else {
-        await axios.put(
-          `http://localhost:5000/users/yourcart/${local.email}/${id}`
-        );
+        await axios.put(`${BASE_URL}/users/yourcart/${local.email}/${id}`);
       }
       test = [];
       getDataEmail();
@@ -70,7 +64,6 @@ export const Printers = () => {
     let test = [];
 
     remAdd.forEach((item) => {
-      // console.log("forEach");
       test.push(item._id);
     });
     console.log("test", test);

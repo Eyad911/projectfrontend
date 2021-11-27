@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 // import React from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 
 export const Nav = () => {
   const navigate = useNavigate();
-    return (
-        <div className="mainDiv">
-             <ul className="ulist">
+  return (
+    <div className="mainDiv">
+      <ul className="ulist">
         {/* <li
           onClick={() => {
             navigate(-1);
@@ -56,9 +56,14 @@ export const Nav = () => {
           Profile
         </li>
       </ul>
-       <h2 id="ecomH1"  onClick={() => {
-            navigate("/home");
-          }} >ecom </h2>
-        </div>
-    )
-}
+      <h2
+        id="ecomH1"
+        onClick={() => {
+          navigate("/home");
+        }}
+      >
+        ecom{" "}
+      </h2>
+    </div>
+  );
+};

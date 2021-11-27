@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
-import './style.css'
+import "./style.css";
 
 export default class Signup extends Component {
   constructor() {
@@ -20,11 +20,10 @@ export default class Signup extends Component {
     this.changePassword = this.changePassword.bind(this);
     this.submitSignUp = this.submitSignUp.bind(this);
   }
-  
 
   changeFullName(e) {
     this.setState({
-      fullName: e.target.value
+      fullName: e.target.value,
     });
   }
 
@@ -59,8 +58,6 @@ export default class Signup extends Component {
     // console.log(this.state.email.length);
     // console.log(this.state.password.length);
 
-
-
     if (
       this.state.fullName.length > 0 &&
       this.state.userName.length > 0 &&
@@ -68,12 +65,10 @@ export default class Signup extends Component {
       this.state.password.length > 0
     ) {
       axios
-        .post("http://localhost:5000/users/signup", riges)
+        .post("https://ecom-911.herokuapp.com/users/signup", riges)
         .then((res) => console.log(res));
 
-       
-
-      window.location = "/home";
+      window.location = "/login";
 
       this.setState({
         fullName: "",
@@ -83,9 +78,7 @@ export default class Signup extends Component {
       });
     } else window.alert("fill all fields");
   }
-  logInPage(){
-    
-  }
+  logInPage() {}
 
   render() {
     return (
@@ -93,7 +86,7 @@ export default class Signup extends Component {
         <div className="contener">
           <div className="formDiv">
             <form onSubmit={this.submitSignUp}>
-            <h2 id="firsth2">SignUp</h2>
+              <h2 id="firsth2">SignUp</h2>
               <input
                 type="text"
                 placeholder="Full Name"
@@ -127,7 +120,6 @@ export default class Signup extends Component {
                 className="btn btn-danger btn-block btnL"
                 value="SignUp"
               />
-               
             </form>
           </div>
         </div>
